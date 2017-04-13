@@ -1,0 +1,24 @@
+
+<div class="container">
+  {{!-- jumbotron --}}
+  <div class="jumbotron">
+    <h1>Mongo Scraper</h1>
+    <p>New York Times Edition</p>
+  </div>
+
+  <div class="panel panel-primary">
+        {{#each news}}
+            <div class="panel-heading">
+                <a target="_blank" href="{{this.link}}" class="title">{{this.headline}}</a>
+                <a href="/save/{{this._id}}" id="saveButton"><button type="button" class="btn btn-success">Save</button></a>
+            </div>
+          <div class="panel-body">
+                {{this.summary}}
+            </div>
+
+
+        {{/each}}
+
+
+
+</div>{{!-- /container div --}}
